@@ -3,14 +3,14 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 function collectNodeMeta(node, path = '0', level = 0, acc = []) {
-  const hasChildren = Array.isArray(node.children) && node.children.length > 0;
+  const children = Array.isArray(node.children) ? node.children : [];
+  const hasChildren = children.length > 0;
+
   acc.push({ id: path, level, hasChildren });
 
-  if (hasChildren) {
-    node.children.forEach((child, index) => {
-      collectNodeMeta(child, `${path}-${index}`, level + 1, acc);
-    });
-  }
+  children.forEach((child, index) => {
+    collectNodeMeta(child, `${path}-${index}`, level + 1, acc);
+  });
 
   return acc;
 }
@@ -23,17 +23,19 @@ export function useTreeState(treeData) {
   );
 
   const [expandedIds, setExpandedIds] = useState(() => new Set(expandableIds));
+  const [isAutoAnimating, setIsAutoAnimating] = useState(true);
   const isAnimatedRef = useRef(false);
 
   useEffect(() => {
     setExpandedIds(new Set(expandableIds));
     isAnimatedRef.current = false;
+    setIsAutoAnimating(true);
   }, [expandableIds]);
 
   useEffect(() => {
     if (isAnimatedRef.current) return;
-    isAnimatedRef.current = true;
 
+    isAnimatedRef.current = true;
     const timers = [];
     const levels = [...new Set(nodeMeta.map((n) => n.level))].sort((a, b) => a - b);
 
@@ -46,7 +48,11 @@ export function useTreeState(treeData) {
             .forEach((node) => next.delete(node.id));
           return next;
         });
-      }, 850 + index * 350);
+
+        if (index === levels.length - 1) {
+          setIsAutoAnimating(false);
+        }
+      }, 850 + index * 300);
 
       timers.push(timer);
     });
@@ -64,10 +70,24 @@ export function useTreeState(treeData) {
       }
       return next;
     });
+    setIsAutoAnimating(false);
+  };
+
+  const expandAll = () => {
+    setExpandedIds(new Set(expandableIds));
+    setIsAutoAnimating(false);
+  };
+
+  const collapseAll = () => {
+    setExpandedIds(new Set(['0']));
+    setIsAutoAnimating(false);
   };
 
   return {
     expandedIds,
     toggleNode,
+    expandAll,
+    collapseAll,
+    isAutoAnimating,
   };
 }
