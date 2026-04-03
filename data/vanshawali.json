@@ -1,0 +1,167 @@
+{
+  "name": "Salik Manjhi",
+  "children": [
+    {
+      "name": "Hargovind Manjhi",
+      "children": [
+        {
+          "name": "Ramji Manjhi",
+          "children": [
+            {
+              "name": "Late Shivshankar Ram",
+              "children": [
+                { "name": "Madan Ram" }
+              ]
+            },
+            {
+              "name": "Late Udeshwar Ram",
+              "children": [
+                { "name": "Dadan Ram" },
+                { "name": "Satyajeet Paswan" }
+              ]
+            },
+            {
+              "name": "Late Baijnath Ram",
+              "children": [
+                { "name": "Manoj Paswan" }
+              ]
+            },
+            {
+              "name": "Bikesh Ram"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Budhnath Manjhi",
+      "children": [
+        {
+          "name": "Late Mahavir Manjhi",
+          "children": [
+            {
+              "name": "Late Prakash Manjhi",
+              "children": [
+                { "name": "Krishna Paswan" },
+                { "name": "Sudama Paswan" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prithvi Manjhi",
+      "children": [
+        {
+          "name": "Rameshwar Manjhi",
+          "children": [
+            { "name": "Sivpujan Manjhi" },
+            { "name": "Surajdev Manjhi" }
+          ]
+        },
+        {
+          "name": "Kameshwar Manjhi",
+          "children": [
+            { "name": "Rituiya Devi" },
+            { "name": "Biguniya Devi" },
+            {
+              "name": "Kago Devi",
+              "children": [
+                { "name": "Rinku Paswan" }
+              ]
+            },
+            { "name": "Indu Devi" },
+            { "name": "Bimla Devi" },
+            { "name": "Kantiya Devi" },
+            { "name": "Lalti Devi" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rambrath Manjhi",
+      "children": [
+        {
+          "name": "Mahendra Manjhi",
+          "children": [
+            {
+              "name": "Bhola Ram",
+              "children": [
+                { "name": "Ajay Kumar Paswan" }
+              ]
+            },
+            {
+              "name": "Udit Ram",
+              "children": [
+                { "name": "Pawan Kumar Paswan" }
+              ]
+            },
+            {
+              "name": "Lalbihari Ram",
+              "children": [
+                { "name": "Ranjay Kumar Paswan" },
+                { "name": "Bipin Kumar Paswan" }
+              ]
+            },
+            {
+              "name": "Suresh Ram",
+              "children": [
+                { "name": "Kumar Gaurav" },
+                { "name": "Ayush Kumar" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chandrabhan Manjhi",
+          "children": [
+            {
+              "name": "Late Swarath Ram",
+              "children": [
+                { "name": "Akshay Paswan" },
+                { "name": "Umesh Paswan" },
+                { "name": "Late Anil Kumar Paswan" }
+              ]
+            },
+            {
+              "name": "Late Nandeo Ram",
+              "children": [
+                { "name": "Jogender Paswan" },
+                { "name": "Nagender Paswan" },
+                { "name": "Birender Paswan" }
+              ]
+            },
+            {
+              "name": "Tusan Ram",
+              "children": [
+                { "name": "Jitender Paswan" },
+                { "name": "Satender Paswan" }
+              ]
+            },
+            {
+              "name": "Late Rajkumar Ram",
+              "children": [
+                { "name": "Sudama Paswan" }
+              ]
+            },
+            {
+              "name": "Late Amardayal Ram",
+              "children": [
+                { "name": "Ashok Kumar Paswan" },
+                { "name": "Santosh Kumar Paswan" }
+              ]
+            },
+            {
+              "name": "Late Birbal Ram",
+              "children": [
+                { "name": "Sandeep Kumar Paswan" },
+                { "name": "Yashwant Kumar Paswan" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
